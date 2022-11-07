@@ -17,8 +17,6 @@ export default function Home() {
         exp = location.state.exp
         level = location.state.level
     }
-    // const { username, password, email, exp, level } = location.state
-    // console.log(username, password, email, exp, level);   
     return(
         <>
         <a style={{textDecoration: "none"}} href="/create">Create player</a>
