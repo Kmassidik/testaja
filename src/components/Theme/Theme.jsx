@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Button from '../Button/Button'
 import { Input } from '../index'
+import { Link } from 'react-router-dom'
 
 function Create(el) {
     const [inputs, setInputs] = useState({});
@@ -11,7 +12,6 @@ function Create(el) {
     }
     const handleSubmit = (event) => {
         event.preventDefault()
-        console.log(inputs)
     }
     return(
         <section className='vh-100'>
@@ -63,7 +63,16 @@ function Create(el) {
                                         />
                                         </>
                                         }
-                                            <Button title='Submit'/>    
+                                       
+                                       <Link to="/" state={{ 
+                                        username: inputs.username,
+                                        password: inputs.password,
+                                        email: inputs.email,
+                                        exp: inputs.exp,
+                                        level: inputs.level
+                                        }}><Button title="Sumbit"/>
+                                        </Link>
+                                       
                                     </form>
                                     </div>
                                     <div className="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">

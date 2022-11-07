@@ -4,7 +4,6 @@ import Home from './pages/Home'
 import CreatePlayer from './pages/CreatePlayer'
 import EditPlayer from './pages/EditPlayer'
 import FindPlayer from './pages/FindPlayer'
-import Show from './pages/Show'
 
 function App() {
   return (
@@ -17,8 +16,6 @@ function App() {
           <Route path='/find' element={<FindPlayer type='find'/>}/>
         </Routes>
       </BrowserRouter>
-
-      <Show></Show>
     </div>
   )
 }
